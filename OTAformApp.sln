@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTAformApp", "OTAformApp.csproj", "{2D870DC7-B686-4141-9DB8-CCF893575333}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB} = {EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SHA1Lib", "..\SHA1\SHA1Lib.vbproj", "{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTSDecrypt", "..\OTSDecrypt\OTSDecrypt.csproj", "{F5BEF3FD-B47E-461F-AB51-9F54AF692965}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D870DC7-B686-4141-9DB8-CCF893575333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D870DC7-B686-4141-9DB8-CCF893575333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D870DC7-B686-4141-9DB8-CCF893575333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D870DC7-B686-4141-9DB8-CCF893575333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BEF3FD-B47E-461F-AB51-9F54AF692965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BEF3FD-B47E-461F-AB51-9F54AF692965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BEF3FD-B47E-461F-AB51-9F54AF692965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BEF3FD-B47E-461F-AB51-9F54AF692965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {993F9196-34F8-4F83-A259-429CF3C693EF}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

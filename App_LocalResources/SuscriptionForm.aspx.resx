@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HeadText" xml:space="preserve">
+    <value>&lt;hr /&gt;&lt;h1&gt;Formulario de alta al servicio de pago remoto del estacionamiento de Mugipark&lt;/h1&gt;&lt;h2&gt;Formulario de Suscripción&lt;/h2&gt;&lt;h3&gt;1. Datos del suscriptor&lt;/h3&gt;&lt;p&gt;Con el pago remoto podrá efectuar estacionamientos de su vehículo o prolongarlos, desde cualquier punto de nuestra red de servicios, y podrá abonar las operaciones facilmente con su tarjeta de credito.&lt;/p&gt;&lt;p&gt;Los Datos de suscripcion le permitirán modificar sus datos o darse de baja cuando usted lo desée. Toda la información que usted nos facilita, estará sujeta a la &lt;a href="POL_PD.html" id="a1" target="_blank" runat="server"&gt;&amp;quot;Política de Protección de Datos Personales&amp;quot;&lt;/a&gt;  del presente sitio web.&lt;/p&gt;&lt;p&gt;Por favor, rellene los detalles para poder beneficiarse del servicio remoto del estacionamiento.&lt;/p&gt;</value>
+  </data>
+  <data name="HeadTextModify" xml:space="preserve">
+    <value>&lt;hr /&gt;&lt;h1&gt;Servicio de pago remoto del estacionamiento de Mugipark&lt;/h1&gt;&lt;h2&gt;Modificación de Datos&lt;/h2&gt;&lt;p&gt;Desde esta página puede modificar sus datos cuando usted lo desée. Toda la información que usted nos facilita, estará sujeta a la &lt;a href="POL_PD.html" target="_blank"&gt;&amp;quot;Política de Protección de Datos Personales&amp;quot;&lt;/a&gt; del presente sitio web.&lt;/p&gt;</value>
+  </data>
+  <data name="lblAdress" xml:space="preserve">
+    <value>Nombre y número de Calle:</value>
+  </data>
+  <data name="lblCardMonthExpire" xml:space="preserve">
+    <value>Caducidad:</value>
+  </data>
+  <data name="lblcardNum" xml:space="preserve">
+    <value>Número de tarjeta:</value>
+  </data>
+  <data name="lblCardType" xml:space="preserve">
+    <value>Tipo de tarjeta:</value>
+  </data>
+  <data name="lblChkPassword" xml:space="preserve">
+    <value>Repetir contraseña(Mín:6 caracteres-Max:20 caracteres):</value>
+  </data>
+  <data name="lblCountry" xml:space="preserve">
+    <value>País:</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Correo Electrónico:</value>
+  </data>
+  <data name="lblLevel" xml:space="preserve">
+    <value>Piso / Puerta:</value>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Contraseña(Mín:6 caracteres-Max:20 caracteres):</value>
+  </data>
+  <data name="lblPlate" xml:space="preserve">
+    <value>Matrículas asociadas:&lt;br&gt;(1 línea - 1 Matrícula)</value>
+  </data>
+  <data name="lblPostCode" xml:space="preserve">
+    <value>Código Postal - Localidad:</value>
+  </data>
+  <data name="lblProvince" xml:space="preserve">
+    <value>Provincia:</value>
+  </data>
+  <data name="lblStair" xml:space="preserve">
+    <value>Escalera / Letra:</value>
+  </data>
+  <data name="lblSurname1" xml:space="preserve">
+    <value>Primer apellido:</value>
+  </data>
+  <data name="lblSurname2" xml:space="preserve">
+    <value>Segundo apellido:</value>
+  </data>
+  <data name="lblTelCompany" xml:space="preserve">
+    <value>Compañía del Móvil:</value>
+  </data>
+  <data name="lblTelephone" xml:space="preserve">
+    <value>Teléfono Móvil 1:</value>
+  </data>
+  <data name="lblTelephone2" xml:space="preserve">
+    <value>Teléfono Móvil 2:</value>
+  </data>
+  <data name="lblUser" xml:space="preserve">
+    <value>Usuario (Mín: 4 caracteres-Máx: 10 caracteres):</value>
+  </data>
+  <data name="linkDNINIF" xml:space="preserve">
+    <value>Campo requerido &amp;quot;NIF ó CIF&amp;quot;</value>
+  </data>
+  <data name="locAtention" xml:space="preserve">
+    <value>Atención, compruebe los siguientes datos:</value>
+  </data>
+  <data name="locCaptionTableFact" xml:space="preserve">
+    <value>Razón social:</value>
+  </data>
+  <data name="locCaptionTablePersonal" xml:space="preserve">
+    <value>Datos Personales:</value>
+  </data>
+  <data name="locConditions" xml:space="preserve">
+    <value>He leido y estoy de acuerdo con la &lt;a href="POL_PD.html" target="_blank"&gt;&amp;quot;Política de Protección de Datos Personales&amp;quot;&lt;/a&gt; del presente sitio web.</value>
+  </data>
+  <data name="locLegend" xml:space="preserve">
+    <value>Los campos marcados con '&lt;strong&gt;&lt;span title="Campo obligatorio" style="COLOR:#a33"&gt;*&lt;/span&gt;&lt;/strong&gt;' deben ser rellenados obligatoriamente.</value>
+  </data>
+  <data name="locTableCard" xml:space="preserve">
+    <value>Datos de la Tarjeta:</value>
+  </data>
+  <data name="locTableRegistration" xml:space="preserve">
+    <value>Datos de Suscripción:</value>
+  </data>
+  <data name="optCardMonthExpire" xml:space="preserve">
+    <value>Mes...</value>
+  </data>
+  <data name="optCardType" xml:space="preserve">
+    <value>Seleccione tipo…</value>
+  </data>
+  <data name="optCardYearExpire" xml:space="preserve">
+    <value>Año...</value>
+  </data>
+  <data name="optTelCom" xml:space="preserve">
+    <value>Seleccione compañía…</value>
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="rfvName" xml:space="preserve">
+    <value>&lt;li&gt;&lt;a href="#name"&gt;Campo requerido &amp;quot;Nombre&amp;quot;&lt;/a&gt;&lt;/li&gt;</value>
+  </data>
+  <data name="rfvSurname1" xml:space="preserve">
+    <value>&lt;li&gt;&lt;a href="#surname1"&gt;Camp requerid &amp;quot;Primer Cognom&amp;quot;&lt;/a&gt;&lt;/li&gt;</value>
+  </data>
+  <data name="spFieldOblig" xml:space="preserve">
+    <value>Campo Obligatorio</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="EmailAccountID" xml:space="preserve">
+    <value>Activar Cuenta&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/ul&gt;&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="EmailBody" xml:space="preserve">
+    <value>&lt;/strong&gt;:&lt;/p&gt;&lt;p&gt;Su solicitud ha sido procesada con éxito. Para poder acceder al &lt;i&gt;Servicio de pago por móvil e internet del Estacionamiento de Mugipark" &lt;/i&gt;debe activar su cuenta pulsando sobre el siguiente enlace: &lt;strong&gt;</value>
+  </data>
+  <data name="EmailBodyDistinctiveMsg" xml:space="preserve">
+    <value>&lt;p&gt;&lt;b&gt;Recuerde:&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Para su &lt;b&gt;identificación en el servicio&lt;/b&gt;, es necesario que &lt;b&gt;solicite su distintivo&lt;/b&gt; al controlador mas cercano, y lo adhiera en el parabrisas de su vehículo.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;b&gt;Esta identificación es necesaria ya que usted no dispone de tique físico.&lt;b&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;</value>
+  </data>
+  <data name="EmailBodyPrinterForm" xml:space="preserve">
+    <value>&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Advertencia:&lt;/strong&gt; Una vez activada su cuenta de usuario, es recomendable que modifique la contraseña que le ha sido asignada. Puede hacerlo desde &lt;a href="http://www.mugipark.com/" target="_blank"&gt;Mugipark Web&lt;/a&gt;, accediendo a sus datos mediante dicha cuenta de usuario.&lt;/p&gt;</value>
+  </data>
+  <data name="EmailBodyPrinterFormPassword" xml:space="preserve">
+    <value>&lt;p&gt;Datos usuario:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Usuario: [NIF/CIF que facilitó en el formulario de Suscripción]&lt;/li&gt;&lt;li&gt;Contraseña: </value>
+  </data>
+  <data name="EmailFeet" xml:space="preserve">
+    <value>&lt;p&gt;Si tiene alguna duda o consulta, puede contactar en: &lt;p&gt;Mugipark&lt;br&gt;</value>
+  </data>
+  <data name="EmailHead" xml:space="preserve">
+    <value>&lt;p&gt;Estimad@ Sr./Sra. &lt;strong&gt;</value>
+  </data>
+  <data name="EmailSubject" xml:space="preserve">
+    <value>Confirmación de la Suscripción</value>
+  </data>
+  <data name="EmailAlternativeURL" xml:space="preserve">
+    <value>Si no puede acceder con el enlace anterior copie y pegue la siguiente dirección en su navegador web:</value>
+  </data>
+</root>

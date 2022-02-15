@@ -1,0 +1,461 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D870DC7-B686-4141-9DB8-CCF893575333}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>OTAformApp</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OTAformApp</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\..\..\inetpub\wwwroot\OPSPrepayWebArinpark\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.19.11.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Net, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="access_user.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="CheckResponse.aspx" />
+    <Content Include="configuration.aspx" />
+    <Content Include="delete_user.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ActivationAccount.aspx" />
+    <Content Include="errorForm.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="fact_oper.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="formOTA.css" />
+    <Content Include="formVal.js" />
+    <Content Include="GetFunds.aspx" />
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="images\adhesivocristal.png" />
+    <Content Include="images\adhesivocristal_90.png" />
+    <Content Include="images\cap-strips.gif" />
+    <Content Include="images\Excel.PNG" />
+    <Content Include="images\form-alert.gif" />
+    <Content Include="images\form-logo.gif" />
+    <Content Include="images\form-logo.png" />
+    <Content Include="images\ico-amex.gif" />
+    <Content Include="images\ico-master.gif" />
+    <Content Include="images\ico-visa.gif" />
+    <Content Include="images\link_out.gif" />
+    <Content Include="images\manual1.JPG" />
+    <Content Include="images\manual10.JPG" />
+    <Content Include="images\manual11.JPG" />
+    <Content Include="images\manual12.JPG" />
+    <Content Include="images\manual13.JPG" />
+    <Content Include="images\manual14.JPG" />
+    <Content Include="images\manual2.JPG" />
+    <Content Include="images\manual3.jpg" />
+    <Content Include="images\manual4.JPG" />
+    <Content Include="images\manual5.JPG" />
+    <Content Include="images\manual6.JPG" />
+    <Content Include="images\manual7.JPG" />
+    <Content Include="images\manual8.JPG" />
+    <Content Include="images\manual9.JPG" />
+    <Content Include="images\printerRed.jpg" />
+    <Content Include="index.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Intro_Data.aspx" />
+    <Content Include="manual.html" />
+    <Content Include="OTAfooter.inc" />
+    <Content Include="OTA_base.css" />
+    <Content Include="POL_PD.html" />
+    <Content Include="print.css" />
+    <Content Include="requestMobileIndex.aspx" />
+    <Content Include="requestMobilePswd.aspx" />
+    <Content Include="requestPsw.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ctrlHead.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="ResponseKO.aspx" />
+    <Content Include="ResponseOK.aspx" />
+    <Content Include="SetFunds.aspx" />
+    <Content Include="Summary.aspx" />
+    <Content Include="SuscriptionForm.aspx" />
+    <Content Include="Web.config" />
+    <Compile Include="access_user.aspx.cs">
+      <DependentUpon>access_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="access_user.aspx.designer.cs">
+      <DependentUpon>access_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\validation.aspx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>validation.aspx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CheckResponse.aspx.cs">
+      <DependentUpon>CheckResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckResponse.aspx.designer.cs">
+      <DependentUpon>CheckResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="configuration.aspx.cs">
+      <DependentUpon>configuration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="configuration.aspx.designer.cs">
+      <DependentUpon>configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUser.cs" />
+    <Compile Include="DBPayMobileWeb.cs" />
+    <Compile Include="DBComponent.cs" />
+    <Compile Include="delete_user.aspx.cs">
+      <DependentUpon>delete_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="delete_user.aspx.designer.cs">
+      <DependentUpon>delete_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationAccount.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ActivationAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationAccount.aspx.designer.cs">
+      <DependentUpon>ActivationAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errorForm.aspx.cs">
+      <DependentUpon>errorForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errorForm.aspx.designer.cs">
+      <DependentUpon>errorForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fact_oper.aspx.cs">
+      <DependentUpon>fact_oper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fact_oper.aspx.designer.cs">
+      <DependentUpon>fact_oper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFunds.aspx.cs">
+      <DependentUpon>GetFunds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetFunds.aspx.designer.cs">
+      <DependentUpon>GetFunds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intro_Data.aspx.cs">
+      <DependentUpon>Intro_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intro_Data.aspx.designer.cs">
+      <DependentUpon>Intro_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTAutils.cs" />
+    <Compile Include="Peticion.cs" />
+    <Compile Include="requestMobileIndex.aspx.cs">
+      <DependentUpon>requestMobileIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="requestMobileIndex.aspx.designer.cs">
+      <DependentUpon>requestMobileIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requestMobilePswd.aspx.cs">
+      <DependentUpon>requestMobilePswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="requestMobilePswd.aspx.designer.cs">
+      <DependentUpon>requestMobilePswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requestPsw.aspx.cs">
+      <DependentUpon>requestPsw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="requestPsw.aspx.designer.cs">
+      <DependentUpon>requestPsw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlHead.ascx.cs">
+      <DependentUpon>ctrlHead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrlHead.ascx.designer.cs">
+      <DependentUpon>ctrlHead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ResponseKO.aspx.cs">
+      <DependentUpon>ResponseKO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResponseKO.aspx.designer.cs">
+      <DependentUpon>ResponseKO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResponseOK.aspx.cs">
+      <DependentUpon>ResponseOK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResponseOK.aspx.designer.cs">
+      <DependentUpon>ResponseOK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resultado.cs" />
+    <Compile Include="SetFunds.aspx.cs">
+      <DependentUpon>SetFunds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetFunds.aspx.designer.cs">
+      <DependentUpon>SetFunds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Summary.aspx.cs">
+      <DependentUpon>Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Summary.aspx.designer.cs">
+      <DependentUpon>Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuscriptionForm.aspx.cs">
+      <DependentUpon>SuscriptionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuscriptionForm.aspx.designer.cs">
+      <DependentUpon>SuscriptionForm.aspx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="access_user.aspx.resx">
+      <DependentUpon>access_user.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="App_LocalResources\index.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\ctrlHead.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\access_user.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\errorForm.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\ActivationAccount.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\delete_user.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\requestPsw.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\validation.aspx.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>validation.aspx.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_LocalResources\configuration.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\SuscriptionForm.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Summary.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\requestMobilePswd.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="delete_user.aspx.resx">
+      <DependentUpon>delete_user.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="errorForm.aspx.resx">
+      <DependentUpon>errorForm.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fact_oper.aspx.resx">
+      <DependentUpon>fact_oper.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.aspx.resx">
+      <DependentUpon>index.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="requestPsw.aspx.resx">
+      <DependentUpon>requestPsw.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlHead.ascx.resx">
+      <DependentUpon>ctrlHead.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="FolderProfile.pubxml" />
+    <None Include="Formulario_Impreso.pdf" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OTSDecrypt\OTSDecrypt.csproj">
+      <Project>{f5bef3fd-b47e-461f-ab51-9f54af692965}</Project>
+      <Name>OTSDecrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHA1\SHA1Lib.vbproj">
+      <Project>{EE4F6F7A-26EC-4BE0-A67B-A7FF99DB07AB}</Project>
+      <Name>SHA1Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8080</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:80/OPSPrepayWebArinpark</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

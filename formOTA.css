@@ -1,0 +1,281 @@
+/* CSS FORM  */
+/*
+A
+{
+	color:#066;
+}
+A:hover
+{
+	color:#099;
+	background-color:#EFF;
+}
+#frame {
+	margin:0px auto;
+	padding:10px 0px;
+	width:480px;
+	text-align:left;
+	font-size:.8em;
+}
+#layoutform
+{
+	margin:0px;
+	padding:16px;
+	background:#FEFEFF ;
+	width: 100%;
+}
+		
+H1
+{
+	margin:0px;
+	padding:0px;
+	padding-top:80px;
+	font-size:1.8em;
+	background:transparent url(images/form-logo.gif) left top no-repeat;
+
+}
+H2{
+	margin:0px;
+	padding:0px;
+	font-size:1.2em;
+	color:#066;
+}
+*/
+
+/* CSS Mugipark*/
+
+FORM#form1,
+DIV#divPrintData
+{
+	margin:0px;
+	padding:10px;
+	border:1px dotted #E90A0F;
+	background-color:#FEFEFE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+FORM#form1 DIV#formError
+{
+	margin:0px;
+	padding:16px;
+	padding-left:64px;
+	border:1px solid #EC6;
+	background: #FFE url(images/form-alert.gif) 16px center no-repeat;
+	color:#960;
+	font: normal bold .8em Verdana, Arial, Helvetica, sans-serif;
+	display:none;
+
+}
+ DIV#formError P{
+	margin:0px;
+	padding:0px;
+}
+
+
+.aspLabel
+{
+    text-align:left !important;
+	color:#666;
+	font-size:.8em;
+	display:block;
+	width:100%;
+	border-bottom:1px dotted #669;
+	padding-bottom:5px;
+}
+
+
+.aspText
+{
+    /*border:1px solid #BBB;*/
+	background-color:#FAFAFA;
+	width:90%;	
+	color:#666;
+	font-size:.8em;
+	font-weight:bold;	
+	/*display:block;*/
+	width:100%;
+	height:auto;
+}
+
+
+FORM#form1 LABEL
+{
+	color:#066;
+	font-size:.8em;
+	display:block;
+	width:100%;
+	border-bottom:1px dotted #669;
+	padding-bottom:5px;
+}
+
+
+FORM#form1 INPUT,
+FORM#form1 SELECT
+{
+	border:1px solid #BBB;
+	background-color:#FAFAFA;
+	width:90%;
+	height:auto;
+}
+
+FORM#form1 SELECT
+{
+	border:1px solid #CCD;
+	background-color:#FAFAFA;
+}
+SELECT OPTION{
+	/*width:100%;
+	width:auto !important;*/
+}
+
+FORM#form1 span.CheckBox input{
+    width:25px;
+    height:25px;
+    background-color:#FAFAFA;
+}  
+
+
+FORM#form1 .inpReq{
+	color:#C00;
+}
+
+TR.inpReq INPUT,
+TR.inpReq SELECT,
+TR.inpReq TEXTAREA
+{
+	border:1px solid #C00 !important;
+	background-color:#FEFAFA !important;
+}
+TR.inpReq TEXTAREA
+{
+    max-width:270px;
+}
+
+FORM#form1 TABLE,
+DIV#divPrintData TABLE
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	table-layout:fixed;
+
+}
+FORM#form1 TABLE CAPTION,
+DIV#divPrintData TABLE CAPTION
+{
+	margin:15px 0px;
+	padding: 2px;
+	padding-left:22px;
+	text-align:left;
+	color:#e30018;
+	background: #EDEDED url(images/cap-strips.gif) left top repeat-y;
+
+	font: normal bold 1.2em Arial, Helvetica, sans-serif;
+	
+}
+
+DIV#divPrintData TD#imgDistintivo 
+{
+    width:20%;
+    text-align:right;
+}
+DIV#divPrintData TD#imgDistintivo IMG
+{
+   width: 90px;
+   height: 90px;
+}
+
+FORM#form1 TABLE TR,
+DIV#divPrintData TABLE TR
+{
+
+	margin:0px;
+	padding:0px;
+
+}
+FORM#form1 TABLE TH,
+FORM#form1 TABLE TD,
+DIV#divPrintData TABLE TH,
+DIV#divPrintData TABLE TD
+{
+	border:none;
+	margin:0px;
+	padding:3px;
+
+}
+FORM#form1 TABLE TD SPAN
+/*DIV#divPrintData TABLE TD SPAN*/
+{
+	font-size:1em;
+	font-weight:bold;
+	position:relative;
+	cursor:help;
+    top: 0px;
+    width: 68px;
+}
+
+FORM#form1 HR,
+DIV#divPrintData HR
+{
+	border:none;
+	border-bottom:1px dashed #669;
+	background-color:transparent;
+	height:1px;
+	margin: 10px 0px;
+	padding:0px;
+
+}
+DIV#formButtons{
+	background-color:#F0F3F3;
+	padding:5px;
+}
+
+/* DIV formConditions */
+
+DIV#formConditions{
+	font:normal bold .8em Verdana, Arial, Helvetica, sans-serif ;
+}
+DIV#formConditions INPUT{
+	width:auto;
+	border:none;
+}
+
+
+option.visa
+{
+	background:left center url(images/ico-visa.gif) no-repeat;
+	padding-left: 32px;
+}
+option.master
+{
+	background:left center url(images/ico-master.gif) no-repeat;
+	padding-left: 32px;
+}
+option.amex
+{
+	background:left center url(images/ico-amex.gif) no-repeat;
+	padding-left: 32px;
+}
+
+TableFact
+{
+    width:100%;
+    border-top-style:solid;
+    border-bottom-color:#AAAADD;
+    border-top-color:#AAAADD;
+    border-bottom-style:solid;    
+}
+
+/* DIV feet	
+DIV#feet
+{
+	background-color:#99CCCC;
+	padding:16px;
+	width:100%;
+	text-align:center;
+
+}
+DIV#feet P
+{
+	margin:0px;
+	font: italic normal .8em Arial, Helvetica, sans-serif;	
+}
+*/

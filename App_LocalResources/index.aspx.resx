@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alta" xml:space="preserve">
+    <value>&lt;h3&gt;Cómo darse de alta:&lt;/h3&gt;
+&lt;p&gt;Los Datos de suscripción le permitirán modificar sus datos o darse de baja cuando usted lo desée. Toda la información que usted nos facilita, estará sujeta a la &lt;a href="POL_PD.html" target="_blank"&gt;&amp;quot;Política de Protección de Datos Personales&amp;quot;&lt;/a&gt; del presente sitio web.&lt;/p&gt;
+&lt;p&gt;Puede darse de alta desde aquí:&lt;/p&gt;
+&lt;dl class="box"&gt;
+&lt;dd&gt;Mediante el &lt;a href="SuscriptionData.aspx"&gt;formulario de suscripción&lt;/a&gt; expuesto en nuestra red, podrá dejar los datos requeridos para la suscripción, y automáticamente se le dara de alta a nuestro servicio.&lt;/dd&gt;
+&lt;dd&gt;&lt;center&gt;&lt;button accesskey="O" tabindex="4" type="button" onclick="document.location = './SuscriptionData.aspx'"&gt;Darse de alta&lt;/button&gt;&lt;/center&gt;&lt;/dd&gt;
+&lt;/dl&gt;</value>
+  </data>
+  <data name="Ampliation" xml:space="preserve">
+    <value>&lt;h3&gt;Ampliación del estacionamiento:&lt;/h3&gt;
+&lt;p&gt;El sistema permite ampliar el tiempo de estacionamiento, siempre y cuando se respete el límite horario del color de la zona. Este servicio le permitira realizar la ampliación desde cualquier lugar sin necesidad de volver al vehículo a colocar el nuevo tique.&lt;/p&gt;</value>
+  </data>
+  <data name="btnAltaForm" xml:space="preserve">
+    <value>Darse de alta &amp;quot;Online&amp;quot;</value>
+  </data>
+  <data name="btnAltaFormPrinter" xml:space="preserve">
+    <value>Impreso de suscripción</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>&lt;h3&gt;Condiciones del servicio:&lt;/h3&gt;
+&lt;p&gt;Este servicio está sujeto a unas &lt;a href="POL_PD.html#tInfo" target="_blank"&gt;condiciones generales&lt;/a&gt; para su correcto uso. Lea con detenimiento dichas condiciones de su interés para entender el funcionamiento del sistema y comprobar que toda la información que usted nos facilite, está protegída por nuestra &lt;a href="POL_PD.html#tLOPD" target="_blank"&gt;política de protección de datos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Le agradecemos de antemano su confianza &lt;/p&gt;
+&lt;p&gt;Gracias&lt;/p&gt;</value>
+  </data>
+  <data name="Devolution" xml:space="preserve">
+    <value>&lt;h3&gt;Devoluciones:&lt;/h3&gt;
+&lt;p&gt;El sistema permite la devolución correspondiente al tiempo de estacionamiento abonado y no consumido. Seleccionando la opción correspondiente el sistema permitirá “desaparcar” su vehículo de forma que únicamente se abone el tiempo realmente estacionado.&lt;/p&gt;</value>
+  </data>
+  <data name="InfoService" xml:space="preserve">
+    <value>&lt;h1&gt;Servicio de pago remoto por móvil y web del estacionamiento de Mugipark&lt;/h1&gt;
+&lt;h2&gt;Información del servicio&lt;/h2&gt;
+&lt;p&gt;Bienvenidos al &lt;strong&gt;&amp;quot;Servicio de pago remoto por móvil y web del estacionamiento de Mugipark&amp;quot;&lt;/strong&gt; de &lt;strong&gt;&lt;abbr title="Servicio del Estacionamiento Regulado"&gt;Mugipark&lt;/abbr&gt;&lt;/strong&gt;, donde podrá abonar y prolongar los estacionamientos de su/s vehículo/s, desde cualquier punto de nuestra red de servicios,  fácilmente con su tarjeta de crédito.&lt;/p&gt;&lt;p&gt;Facilitando los datos requeridos para la suscripción, podrá darse de alta y tener acceso a dicho servicio.&lt;/p&gt;</value>
+  </data>
+  <data name="Remote" xml:space="preserve">
+    <value>&lt;h3&gt;Estacionamientos remotos:&lt;/h3&gt;
+&lt;p&gt;Únicamente conectándose a nuestro sistema, podrá gestionar el tiempo/importe que desée para los vehiculos que tenga dados de alta y automáticamente el sistema reconocerá el estacionamiento sin necesidad de dejar el ticket en dicho vehículo. &lt;/p&gt;</value>
+  </data>
+  <data name="Santions" xml:space="preserve">
+    <value>&lt;h3&gt;Pago de denuncias:&lt;/h3&gt;
+&lt;p&gt;Mientras el expediente de denuncia esté dentro del tiempo establecido para realizar el pago, usted podrá introducir el número de denuncia en nuestro sistema y automaticamente se anulará dicha denuncia, sin necesidad de acercarse a un parquímetro para realizar la operación&lt;/span&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="Ventajas" xml:space="preserve">
+    <value>&lt;h3&gt;Ventajas del servicio:&lt;/h3&gt;
+&lt;p&gt;La principal ventaja de este servicio es que podrá realizar operaciones del estacionamiento regulado, sin necesidad de realizarlas presencialmente en un parquímetro. El &amp;nbsp;sistema reconocerá sus operaciones sin necesidad de dejar el tiquet en el vehículo, ahorrándose así su tiempo.&lt;/p&gt;
+&lt;p&gt;Operaciones que podrá realizar remotamente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pagos de Tique.&lt;/li&gt;
+&lt;li&gt;Devoluciones.&lt;/li&gt;
+&lt;li&gt;Pagos de Denuncia.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="lnkForm" xml:space="preserve">
+    <value>formulario de suscripción</value>
+  </data>
+  <data name="lnkFormPrinter" xml:space="preserve">
+    <value>impreso de suscripción</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>&lt;h3&gt;Coste del servicio:&lt;/h3&gt;&lt;p&gt;El servicio de pago &lt;span class="destacado"&gt;remoto (móvil/web)&lt;/span&gt; es sin coste de mantenimiento.&lt;/p&gt;</value>
+  </data>
+</root>

@@ -1,0 +1,150 @@
+html,body
+{
+	font-family: sans-serif;
+	font-size: 10pt;
+}
+
+h1 { font-size:14pt; }
+h2 { font-size: 12pt; }
+DIV#top_menu {
+	display:none;
+}
+DIV#emailMsg { display:none !important; }
+
+P { display:none; }
+
+DIV#divPrint { display:none; }
+
+DIV#divPrintData
+{
+	margin:0px;
+	padding:10px;
+	border:1px dotted #999;
+	font-family: sans-serif;
+}
+
+DIV#divPrintData P 
+{ display:block;}
+
+DIV#divPrintData TD#imgDistintivo 
+{
+    width:20%;
+    text-align:right;
+}
+DIV#divPrintData TD#imgDistintivo IMG
+{
+   width: 90px;
+   height: 90px;
+}
+
+.aspLabel
+{
+    text-align:left !important;
+	color:#666;
+	font-size:.8em;
+	display:block;
+	width:100%;
+	border-bottom:1px dotted #999;
+	padding-bottom:5px;
+        font-weight:normal;
+
+}
+
+.aspText
+{    
+	width:90%;	
+	color:#333;
+	font-size:.8em;
+	font-weight:bold;
+	width:100%;
+}
+
+DIV#divPrintData INPUT,
+DIV#divPrintData SELECT
+{
+	border:1px solid #BBB;
+	width:90%;
+	height:auto;
+}
+
+DIV#divPrintData SELECT
+{
+	border:1px solid #CCD;
+}
+
+DIV#divPrintData span.CheckBox input{
+    width:25px;
+    height:25px;
+}  
+
+TR.inpReq INPUT,
+TR.inpReq SELECT,
+TR.inpReq TEXTAREA
+{
+	border:1px solid #134 !important;
+}
+TR.inpReq TEXTAREA { max-width:270px; }
+
+DIV#divPrintData TABLE 
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	table-layout:fixed;
+}
+
+DIV#divPrintData TABLE CAPTION
+{
+	margin:5px 0px;
+	text-align:left;
+	color:#999;
+	font: normal bold 1.2em sans-serif;
+}
+
+DIV#divPrintData TABLE TR
+{
+	margin:0px;
+	padding:0px;
+}
+
+DIV#divPrintData TABLE TH,
+DIV#divPrintData TABLE TD 
+{
+	border:none;
+	margin:0px;
+	padding:0px;
+}
+
+DIV#divPrintData HR
+{
+	border:none;
+	border-bottom:1px dashed #999;
+	background-color:transparent;
+	height:1px;
+	margin: 10px 0px;
+	padding:0px;
+}
+
+DIV#formButtons{
+	padding:5px;
+}
+
+
+/* DIV formConditions */
+
+DIV#formConditions{ font: .8em sans-serif ; }
+DIV#formConditions INPUT
+{ 
+	width:auto;
+	border:none;
+}
+
+/* DIV feet	*/
+DIV#feet DIV
+{
+	display:none;
+}
+
+DIV#feet ADDRESS { color:#666 !important; text-align:center; }
+
+/* END PRINT CSS */

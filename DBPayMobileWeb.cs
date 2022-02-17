@@ -263,7 +263,8 @@ namespace OTAformApp
             DateTime EndDate;  
             StringBuilder sbSQL = new StringBuilder();
 
-            sbSQL.AppendFormat("select mo_id as Id,'Recarga' as Tipo, to_date(mo_date || ' ' || mo_hora, 'dd/mm/yyyy hh24:mi') as fecha, mo_amount/100 as Importe, PARSE_RESULT(mo_response) as resultado from mobile_orders t where mo_mu_id = {0} and mo_date is not null ", userId);
+            //sbSQL.AppendFormat("select mo_id as Id,'Recarga' as Tipo, to_date(mo_date || ' ' || mo_hora, 'dd/mm/yyyy hh24:mi') as fecha, mo_amount/100 as Importe, PARSE_RESULT(mo_response) as resultado from mobile_orders t where mo_mu_id = {0} and mo_date is not null ", userId);
+            sbSQL.AppendFormat("select mo_id as Id,'Recarga' as Tipo, TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy hh24:mi'),'dd/mm/yyyy hh24:mi') as fecha, mo_amount/100 as Importe, mo_response as resultado from mobile_orders t where mo_mu_id = {0} and mo_timestamp is not null ", userId);
 
             switch (period)
             {
@@ -273,19 +274,20 @@ namespace OTAformApp
                 case "Actual":
                     IniDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
                     EndDate = IniDate.AddMonths(1).AddDays(-1);
-                    sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
+                    //sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
+                    sbSQL.AppendFormat("AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
                     break;
                 case "Anterior":
                     IniDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
                     EndDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1);
-                    sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
-
+                    //sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
+                    sbSQL.AppendFormat("AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
                     break;
                 case "Ultimos3":
                     IniDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-2);
                     EndDate = IniDate.AddMonths(3).AddDays(-1);
-                    sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
-
+                    //sbSQL.AppendFormat("AND to_date(mo_date, 'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND to_date(mo_date, 'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
+                    sbSQL.AppendFormat("AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') >= to_date('{0}','dd/mm/yyyy') AND TO_DATE(to_char(mo_timestamp,'dd/mm/yyyy'),'dd/mm/yyyy') <= to_date('{1}','dd/mm/yyyy') ", IniDate.ToString("dd/MM/yyyy"), EndDate.ToString("dd/MM/yyyy"));
                     break;
             }
             sbSQL.AppendFormat("union ");

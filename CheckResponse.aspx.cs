@@ -64,6 +64,7 @@ namespace OTAformApp
                                       Ds_MerchantCode, Ds_Terminal, Ds_Signature, Ds_Response,
                                       Ds_MerchantData, Ds_SecurePayment, Ds_TransactionType, Ds_Card_Country, Ds_Authorisation_Code,
                                       Ds_ConsumerLanguage, Ds_Card_Type, strTokenUserId, strTokenId);
+                Log.Info("CheckResponse Page_Load INFO: UpdateOrderStatus");
             }
         }
 

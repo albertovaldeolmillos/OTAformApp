@@ -255,8 +255,9 @@ namespace OTAformApp
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Log.Fatal("SetUserData EXCEPTION: ", ex);
                 throw;
             }
             finally
@@ -471,9 +472,9 @@ namespace OTAformApp
                     activateAccounts = true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Log.Fatal("ActivateAccount EXCEPTION: ", ex);
                 throw;
             }
             finally

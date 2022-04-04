@@ -77,6 +77,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("OpenConnection FATAL:" + ex.Message);
                 throw ex;
             }
 
@@ -93,6 +94,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("CloseConnection FATAL:" + ex.Message);
                 throw ex;
             }
         }
@@ -113,6 +115,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("GetTransaction FATAL:" + ex.Message);
                 throw ex;
             }
 
@@ -147,6 +150,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("ExecuteCommand FATAL:" + ex.Message);
                 throw ex;
             }
             finally
@@ -190,6 +194,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("ExecuteCommand FATAL:" + ex.Message);
                 throw ex;
             }
             finally
@@ -242,6 +247,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("ExecuteCommandReturningId FATAL:" + ex.Message);
                 throw ex;
             }
             finally
@@ -288,6 +294,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("ExecuteCommandReturningId FATAL:" + ex.Message);
                 throw ex;
             }
             finally
@@ -335,6 +342,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("GetDataSet FATAL:" + ex.Message);
                 throw ex;
             }
             finally

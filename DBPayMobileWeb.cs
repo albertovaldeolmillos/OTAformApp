@@ -2,7 +2,7 @@
 using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using System;
-
+using System.Reflection;
 
 namespace OTAformApp
 {
@@ -13,6 +13,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetMobileUser SQL: " + "SELECT * FROM MOBILE_USERS mu WHERE MU_ID = " + userId + " AND MU_VALID = 1 AND MU_DELETED = 0");
             sbSQL.AppendFormat("SELECT * FROM MOBILE_USERS mu WHERE MU_ID = {0} AND MU_VALID = 1 AND MU_DELETED = 0", userId);
 
 
@@ -23,6 +24,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetMobileUserPlates SQL: " + "SELECT MUP_PLATE FROM MOBILE_USERS_PLATES WHERE MUP_MU_ID = " + userId + " AND MUP_VALID = 1 AND MUP_DELETED = 0 ");
             sbSQL.AppendFormat("SELECT MUP_PLATE FROM MOBILE_USERS_PLATES WHERE MUP_MU_ID = {0} AND MUP_VALID = 1 AND MUP_DELETED = 0 ", userId);
 
             return GetDataSet(sbSQL.ToString());
@@ -33,6 +35,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetMobileUserByUserName SQL: " + "SELECT MU_ID FROM  mobile_users WHERE MU_LOGIN = " + userName);
             sbSQL.AppendFormat("SELECT MU_ID FROM  mobile_users WHERE MU_LOGIN = '{0}' ", userName);
 
             return GetDataSet(sbSQL.ToString());
@@ -43,6 +46,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetMobileUserByEmail SQL: " + "SELECT MU_ID FROM  mobile_users WHERE MU_EMAIL = " + email);
             sbSQL.AppendFormat("SELECT MU_ID FROM  mobile_users WHERE MU_EMAIL = '{0}'", email);
 
             return GetDataSet(sbSQL.ToString());
@@ -52,6 +56,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetOrder SQL: " + "SELECT SEQ_ORDER.NEXTVAL AS ORDER_ID FROM  DUAL");
             sbSQL.AppendFormat("SELECT SEQ_ORDER.NEXTVAL AS ORDER_ID FROM  DUAL");
 
             return GetDataSet(sbSQL.ToString());
@@ -75,6 +80,7 @@ namespace OTAformApp
                 sSQL += "'" + telephone1 + "',";
                 sSQL += "'" + login + "','" + password + "', null , 1, 0 , null, 0, '" + door_number + "','" + telephone2 + "') returning mu_id into :ID ";
 
+                Log.Info("InsertUser SQL: " + sSQL);
                 userId = ExecuteCommandReturningId(sSQL, oraTrans);
 
                 Guid tokenUSER = System.Guid.NewGuid();
@@ -82,6 +88,7 @@ namespace OTAformApp
 
                 StringBuilder sbSQL2 = new StringBuilder();
 
+                Log.Info("InsertUser SQL: " + "insert into MOBILE_USERS_ACTIVATION (mu_activation_key, mu_id, mu_email_date) " + "VALUES('" + token + "', " + userId.ToString() + ", sysdate)");
                 sbSQL2.AppendFormat("insert into MOBILE_USERS_ACTIVATION (mu_activation_key, mu_id, mu_email_date) ");
                 sbSQL2.AppendFormat("VALUES( '{0}', {1}, sysdate)", token, userId.ToString());
 
@@ -123,6 +130,7 @@ namespace OTAformApp
                 updSQL += " MU_PASSWORD = '" + password + "' ";
                 updSQL += " WHERE MU_ID = " + userId;
 
+                Log.Info("UpdateUser SQL: " + updSQL);
                 return ExecuteCommand(updSQL);
         }
 
@@ -130,6 +138,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("InserUserPlate SQL: " + "insert into mobile_users_plates  (mup_mu_id, mup_plate) values (" + userId + "," + plate + ")");
             sbSQL.AppendFormat("insert into mobile_users_plates  (mup_mu_id, mup_plate) ");
             sbSQL.AppendFormat("values ({0}, '{1}') ", userId, plate);
 
@@ -141,6 +150,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("DeleteUserPlate SQL: " + "update mobile_users_plates SET MUP_VALID = 0 , MUP_DELETED = 1 where MUP_MU_ID = '" + userId + "' AND MUP_PLATE = '" + plate + "'");
             sbSQL.AppendFormat("update mobile_users_plates SET MUP_VALID = 0 , MUP_DELETED = 1 where MUP_MU_ID = '{0}' AND MUP_PLATE = '{1}'", userId, plate);
 
             return ExecuteCommand(sbSQL.ToString());
@@ -151,6 +161,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("InsertActivationAccount SQL: " + "insert into MOBILE_USERS_ACTIVATION  (mu_activation_key, mu_id, mu_email_date) values (" + token + "," + UserId + ", sysdate)");
             sbSQL.AppendFormat("insert into MOBILE_USERS_ACTIVATION (mu_activation_key, mu_id, mu_email_date) ");
             sbSQL.AppendFormat("VALUES( '{0}', {1}, sysdate)", token, UserId);
             
@@ -162,6 +173,7 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("InsertOrder SQL: " + "insert into mobile_orders  (mo_id, mo_mu_id, mo_amount) values (seq_order.nextval," + userId + "," + amount + ")");
             sbSQL.AppendFormat("insert into mobile_orders  (mo_id, mo_mu_id, mo_amount) ");
             sbSQL.AppendFormat("values  (seq_order.nextval, {0}, {1}) returning mo_id into :ID", userId, amount);
 
@@ -174,6 +186,7 @@ namespace OTAformApp
 
             StringBuilder sbSQL = new StringBuilder();
 
+            Log.Info("GetActivations SQL: " + "select * from mobile_users_activation  where mu_activation_key = '" + key + "' and mu_activation_date is null order by mu_email_date desc");
             sbSQL.AppendFormat("select * from mobile_users_activation  where mu_activation_key = '{0}' and mu_activation_date is null order by mu_email_date desc", key);
 
             return GetDataSet(sbSQL.ToString());
@@ -187,9 +200,7 @@ namespace OTAformApp
             OracleTransaction oraTrans = GetTransaction();
             int numResults = -1;
 
-
-           
-
+            Log.Info("ActivateAccount SQL 1: " + "update mobile_users_activation set mu_activation_date = sysdate where mu_id = " + userId);
             sbSQL.AppendFormat("update mobile_users_activation set mu_activation_date = sysdate where mu_id = {0}", userId);
 
             numResults = ExecuteCommand(sbSQL.ToString(), oraTrans);
@@ -199,23 +210,27 @@ namespace OTAformApp
 
                 StringBuilder sbSQL2 = new StringBuilder();
 
+                Log.Info("ActivateAccount SQL 2: " + "update mobile_users set mu_activate_account = 1 where mu_id = " + userId);
                 sbSQL2.AppendFormat("update mobile_users set mu_activate_account = 1 where mu_id = {0}", userId);
 
                 numResults = ExecuteCommand(sbSQL2.ToString(), oraTrans);
 
                 if (numResults != 1)
                 {
+                    Log.Error("ActivateAccount SQL 2 result KO");
                     oraTrans.Rollback();
                     numResults = -1;
 
                 }
                 else
                 {
+                    Log.Info("ActivateAccount SQL 2 result OK");
                     oraTrans.Commit();
                 }
             }
             else
             {
+                Log.Error("ActivateAccount SQL 1 result KO");
                 numResults = -1;
                 oraTrans.Rollback();
             }
@@ -253,6 +268,7 @@ namespace OTAformApp
             sbSQL.AppendFormat("mo_token_id = '{0}' ", strTokenUser);
             sbSQL.AppendFormat("where mo_id = {0}", Ds_Order);
 
+            Log.Info("UpdateOrderStatus SQL: " + sbSQL.ToString());
             return ExecuteCommand(sbSQL.ToString());
 
         }
@@ -320,6 +336,7 @@ namespace OTAformApp
 
             sbSQL.AppendFormat(" order by 1 desc");
 
+            Log.Info("GetUserOrders SQL: " + sbSQL.ToString());
 
             return GetDataSet(sbSQL.ToString());
         }
@@ -328,8 +345,8 @@ namespace OTAformApp
         {
             StringBuilder sbSQL = new StringBuilder();
 
-            sbSQL.AppendFormat("update mobile_users set mu_message_show = {0} where mu_id = {1}", value, userId);
-            
+            Log.Info("GetUserOrders SQL: " + "update mobile_users set mu_message_show = " + value + " where mu_id = " + userId);
+            sbSQL.AppendFormat("update mobile_users set mu_message_show = {0} where mu_id = {1}", value, userId);          
 
             return ExecuteCommand(sbSQL.ToString());                     
 

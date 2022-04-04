@@ -45,15 +45,16 @@ namespace OTAformApp
                 }
                 else
                 {
+                    Log.Error("ActivationAccount Page_Load ERROR: userID = -1");
                     throw new Exception();
                 }
                     
                                  
             }
-			catch(Exception)
+			catch(Exception ex)
 			{                
                 strError = (string)GetLocalResourceObject("ExceptionDefault");
-
+                Log.Fatal("ActivationAccount Page_Load FATAL: " +  ex.Message);
                 Response.Redirect("errorForm.aspx?Error=" + strError);
 			}
 			

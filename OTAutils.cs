@@ -86,6 +86,7 @@ namespace OTAformApp
             catch (Exception ex)
             {
                 CloseConnection();
+                Log.Fatal("OpenConnection FATAL:" + ex.Message);
                 throw new Exception("Error al abrir la conexion a la BBDD. " + ex.Message);
             }            
         }
@@ -109,6 +110,7 @@ namespace OTAformApp
             }
             catch (Exception ex)
             {
+                Log.Fatal("CloseConnection FATAL:" + ex.Message);
                 throw new Exception("Error al cerrar la conexión a la BBDD. " + ex.Message);
             }
         }
@@ -128,6 +130,7 @@ namespace OTAformApp
             catch (Exception ex)
             {
                 CloseConnection();
+                Log.Fatal("SelectMethod FATAL:" + ex.Message);
                 throw new Exception("Error al recuperar los datos de la BBDD. " + ex.Message);
             }            
         }
